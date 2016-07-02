@@ -44,7 +44,7 @@ public class Main {
                         phoneSc = sc.next(); // считываем phone
                         dataUser.addPhone(phoneSc);
                         contacts.add(dataUser);
-                        menu.Menu1(); // предлогаем добавить еще нормер
+                        menu.Menu1(); // предлагаем добавить еще нормер
                     }else if(choice == 5){
                         menu.Menu();
                         break;
