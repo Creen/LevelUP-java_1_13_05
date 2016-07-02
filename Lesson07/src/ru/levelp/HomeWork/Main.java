@@ -29,7 +29,7 @@ public class Main {
                 System.out.print("Enter phone: ");
                 String phoneSc = sc.next(); // считываем phone
 
-                menu.Menu1(); // предлогаем добавить еще нормер
+                menu.Menu1(); // предлагаем добавить еще нормер
 
                 DetailContact dataUser = new DetailContact();
                 dataUser.setName(nameSc);
