@@ -52,7 +52,7 @@ public class Main {
 
             } else if (choice == 2) {
                 for (int i = 0; i < contacts.size(); i++) {
-                    contacts.toString();
+
                 }
 //                menu.Menu();
             } else if (choice == 3) {
