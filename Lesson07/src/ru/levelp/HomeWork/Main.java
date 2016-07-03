@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String args[]) {
 
-        ArrayList<DetailContact> contacts = new ArrayList<DetailContact>();  // коллекция контактов
+        ArrayList<Contact> contacts = new ArrayList<Contact>();  // коллекция контактов
 
         Scanner sc = new Scanner(System.in); // создаем сканер
         Menu menu = new Menu(); // создаем меню
@@ -22,20 +22,19 @@ public class Main {
                 String nameSc = sc.next(); // считываем имя
                 System.out.print("Enter email: ");
                 String emailSc = sc.next(); // считываем email
-                System.out.print("Enter address: ");
-                String addressSc = sc.next(); // считываем address
-                System.out.print("Enter workplace: ");
-                String workplaceSc = sc.next(); // считываем workplace
+//                System.out.print("Enter address: ");
+//                String addressSc = sc.next(); // считываем address
+//                System.out.print("Enter workplace: ");
+//                String workplaceSc = sc.next(); // считываем workplace
                 System.out.print("Enter phone: ");
                 String phoneSc = sc.next(); // считываем phone
 
                 menu.Menu1(); // предлагаем добавить еще нормер
 
-                DetailContact dataUser = new DetailContact();
+                Contact dataUser = new Contact();
                 dataUser.setName(nameSc);
                 dataUser.setEmail(emailSc);
-                dataUser.setAddress(addressSc);
-                dataUser.setWorkpale(workplaceSc);
+
 
                 while (true){
                     choice = sc.nextInt(); // считывает целое число с потока ввода и сохраняем в переменную
@@ -52,9 +51,11 @@ public class Main {
                 }
 
             } else if (choice == 2) {
-
+                for (int i = 0; i < contacts.size(); i++) {
+                    System.out.println(contacts);
+                }
                 System.out.println();
-                menu.Menu();
+//                menu.Menu();
             } else if (choice == 3) {
                 System.out.print("Enter name: ");
                 String nameDelete = sc.next(); // считываем имя

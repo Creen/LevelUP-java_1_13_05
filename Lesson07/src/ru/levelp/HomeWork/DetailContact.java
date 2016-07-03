@@ -26,7 +26,7 @@ public class DetailContact extends Contact {
 
 //    @Override
 //    public String toString() {
-//        String result = name + " " + email + " " + phones;
+//        String result = getName() + " " + getEmail() + " " + address + " " + workpale + " " +  getPhones();
 //
 //        if(phones.size() == 1) {
 //            result += phones.get(0);

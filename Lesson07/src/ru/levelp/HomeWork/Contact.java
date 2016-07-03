@@ -18,23 +18,28 @@ public class Contact {
         return  phones;
     }
 
+    public void print(){
+        System.out.println(toString());
+    }
+
     @Override
     public String toString() {
-        String result = name + " " + email + " " + phones;
+        String result = name + " " + email;
 
         if(phones.size() == 1) {
             result += phones.get(0);
         } else {
+            result += "\n<=== Phones ===>\n";
             for (int i = 0; i < phones.size(); i++) {
-                result += "\n<=== Phones ===>\n" + phones.get(i) + "\n" + name+ " phones >>>";
+                result += phones.get(i) + "\n";
+//
             }
+            result += "<<<" + name+ " phones >>>";
 
         }
         return result;
     }
-    public void print(){
-        System.out.println(toString());
-    }
+
 
     public String getName() {
         return name;
