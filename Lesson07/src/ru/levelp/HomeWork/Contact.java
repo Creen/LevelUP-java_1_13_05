@@ -32,10 +32,8 @@ public class Contact {
             result += "\n<=== Phones ===>\n";
             for (int i = 0; i < phones.size(); i++) {
                 result += phones.get(i) + "\n";
-//
             }
-            result += "<<<" + name+ " phones >>>";
-
+            result += "<<<" + name + " phones >>>";
         }
         return result;
     }

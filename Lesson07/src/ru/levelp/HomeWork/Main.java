@@ -29,32 +29,31 @@ public class Main {
                 System.out.print("Enter phone: ");
                 String phoneSc = sc.next(); // считываем phone
 
+                Contact User = new Contact();
+                User.setName(nameSc);
+                User.setEmail(emailSc);
+                User.addPhone(phoneSc);
+
                 menu.Menu1(); // предлагаем добавить еще нормер
-
-                Contact dataUser = new Contact();
-                dataUser.setName(nameSc);
-                dataUser.setEmail(emailSc);
-
 
                 while (true){
                     choice = sc.nextInt(); // считывает целое число с потока ввода и сохраняем в переменную
                     if(choice == 6) {
                         System.out.print("Enter phone: ");
                         phoneSc = sc.next(); // считываем phone
-                        dataUser.addPhone(phoneSc);
-                        contacts.add(dataUser);
-                        menu.Menu1(); // предлагаем добавить еще нормер
+                        User.addPhone(phoneSc);
+                        contacts.add(User);
+                        menu.Menu1(); // предлагаем добавить еще номер
                     }else if(choice == 5){
-                        menu.Menu();
                         break;
                     }
                 }
+                menu.Menu();
 
             } else if (choice == 2) {
                 for (int i = 0; i < contacts.size(); i++) {
-                    System.out.println(contacts);
+                    contacts.toString();
                 }
-                System.out.println();
 //                menu.Menu();
             } else if (choice == 3) {
                 System.out.print("Enter name: ");
